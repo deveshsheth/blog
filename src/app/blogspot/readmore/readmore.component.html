@@ -1,0 +1,25 @@
+
+<div class="container col-lg-12 p-3 m-2">
+    <div class="row">
+      <div class="col-lg-3 m-3 ">
+        <!-- Card -->
+        <div class="card">
+  
+          <!-- Card image -->
+          <img [src]="['http://localhost:9000/uploads/'+ activeblog[0].image]" class="rounded" style="width: 240.5px;height: 250px;">
+  
+          <!-- Card content -->
+          <div class="card-body">
+  
+            <!-- Title -->
+            <h4 class="card-title"><a>{{activeblog[0].title}}</a></h4>
+            <!-- Text -->
+            <p class="card-text">{{activeblog[0].description}}</p>
+            <!-- Button -->
+          </div>
+  
+        </div>
+        <!-- Card -->
+      </div>
+    </div>
+  </div>

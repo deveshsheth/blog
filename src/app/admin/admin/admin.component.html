@@ -1,0 +1,14 @@
+
+<div class="row" style="margin-top: 20px;margin-bottom: 20px;">
+  <div class="col-4">
+    <div id="list-example" class="list-group">
+      <a class="list-group-item list-group-item-action active" style="background-color: #528bba; color: white; font-weight: bold;" [routerLink]="['./dashboard']">Dashboard</a>
+      <a class="list-group-item list-group-item-action" style="background-color: #528bba; color: white; font-weight: bold;" [routerLink]="['./blogs']">Blogs</a>
+      <a class="list-group-item list-group-item-action" style="background-color: #528bba; color: white; font-weight: bold;" [routerLink]="['./categories']">Categories</a>
+      <a class="list-group-item list-group-item-action" style="background-color: #528bba; color: white; font-weight: bold;" [routerLink]="['./pages']">Pages</a>
+      <a class="list-group-item list-group-item-action" style="background-color: #528bba; color: white; font-weight: bold;" (click)="logout()">Logout</a>
+    </div>
+  </div>
+  <div class="col-8"> 
+      <router-outlet></router-outlet>
+</div>

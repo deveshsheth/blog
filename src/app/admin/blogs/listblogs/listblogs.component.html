@@ -1,0 +1,24 @@
+<div class="l">
+    <table *ngIf="list" datatable class="row-border hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th> 
+            <th scope="col">Data</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let b of list">
+            <th scope="row">{{b.bid}}</th>
+            <td><img [src]="['http://localhost:9000/uploads/'+ b.image]" class="rounded" style="width: 60px;height: 60px;"></td>
+            <td>{{b.title}}</td>
+            <td>{{b.created_at | date: 'mediumDate'}}</td>
+            <td><a [routerLink]="['/admin/blogs/editblog',b.bid]"><button type="button" class="btn btn-info btn-rounded">Edit</button></a></td>
+            <td><button type="button" class="btn btn-danger btn-rounded" (click)="delete(b.bid)">Remove</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

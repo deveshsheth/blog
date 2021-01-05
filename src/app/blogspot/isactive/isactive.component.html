@@ -1,0 +1,26 @@
+<div class="container col-lg-12 p-3 m-2">
+  <div class="row">
+    <div class="col-lg-3 m-3 " *ngFor="let a of activeblog">
+      <!-- Card -->
+      <div class="card">
+
+        <!-- Card image -->
+        <img [src]="['http://localhost:9000/uploads/'+ a.image]" class="rounded" style="width: 240.5px;height: 250px;">
+
+        <!-- Card content -->
+        <div class="card-body">
+
+          <!-- Title -->
+          <h4 class="card-title"><a>{{a.title}}</a></h4>
+          <!-- Text -->
+          <p class="card-text">{{a.description}}</p>
+          <!-- Button -->
+          <a [routerLink]="['/readmore',a.bid]" class="btn btn-primary">Read More</a>
+
+        </div>
+
+      </div>
+      <!-- Card -->
+    </div>
+  </div>
+</div>
