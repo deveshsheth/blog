@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  Base_Url:"https://pgblogs.herokuapp.com/"
+  //Base_Url:"https://pgblogs.herokuapp.com/"
 };
 
 /*
